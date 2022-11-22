@@ -11,4 +11,13 @@
 <body>
 <header>
     <h1><?php bloginfo('name'); ?></h1>
+    <nav>
+            <?php wp_nav_menu(
+                    array(
+                        'menu' => 'primary',
+                        'theme_location' => 'header-menu'
+                    )
+                );
+            ?>
+        </nav>
 </header>

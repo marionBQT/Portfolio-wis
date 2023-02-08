@@ -17,7 +17,7 @@
             <?php wp_nav_menu([
                 'theme_location' => 'header',
                 'container' => false,
-                'menu-class' => 'navbar-nav'
+                'menu_class' => 'navbar-nav mr-auto'
             ]) ?>
             <!--
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

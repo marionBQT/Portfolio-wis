@@ -1,5 +1,13 @@
 <?php
 
+class MonTheme {
+    public function __construct() {
+        require_once 'blocks/hero.php';
+    }
+}
+
+new MonTheme();
+
 function mytheme_register_nav() {
     register_nav_menus(
         [
@@ -47,3 +55,4 @@ add_action('after_setup_theme', function () {
 add_filter('document_title_separator', 'mytheme_title_separator');
 add_filter('nav_menu_css_class', 'mytheme_menu_class');
 add_filter('nav_menu_link_attributes', 'mytheme_menu_link_class');
+

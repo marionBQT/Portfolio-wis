@@ -1,12 +1,12 @@
 <?php
 
-class MonTheme {
-    public function __construct() {
-        require_once 'blocks/hero.php';
-    }
-}
-
-new MonTheme();
+//class MonTheme {
+//    public function __construct() {
+//        require_once 'blocks/hero.php';
+//    }
+//}
+//
+//new MonTheme();
 
 function mytheme_register_nav() {
     register_nav_menus(
@@ -16,10 +16,6 @@ function mytheme_register_nav() {
         ],
     );
 }
-
-//function mytheme_supports() {
-//    register_nav_menu('header', 'En-tête du menu');
-//}
 
 add_action('init', 'mytheme_register_nav');
 
@@ -56,3 +52,23 @@ add_filter('document_title_separator', 'mytheme_title_separator');
 add_filter('nav_menu_css_class', 'mytheme_menu_class');
 add_filter('nav_menu_link_attributes', 'mytheme_menu_link_class');
 
+
+get_template_part('inc/plugin', 'acf');
+get_template_part('inc/theme', 'assets');
+
+//if (function_exists('acf_register_block_type')) {
+//    add_action('acf/init', 'acf_register_block_types');
+//}
+//
+//function register_block_types(){
+//    acf_register_block_type(
+//        array(
+//            'name' => 'myblock',
+//            'title' => __('My Block'),
+//            'description' => __('My first real custom Block'),
+//            'render_template' => 'template-parts/blocks/myblock/myblock.php',
+//            'icon' => 'editor-paste-text',
+//            'keywords' => array('myblock', 'product'),
+//        )
+//    );
+//}

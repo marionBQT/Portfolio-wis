@@ -1,1 +1,0 @@
-(0,wp.blocks.registerBlockType)("mytheme/hero",{title:"Hero",category:"widgets",supports:{html:!1},edit:function(e){var t=e.className;return wp.element.createElement("div",{className:t},"Bonjour")},save:function(){return null}});

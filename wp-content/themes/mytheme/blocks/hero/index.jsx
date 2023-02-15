@@ -11,7 +11,7 @@ registerBlockType('mytheme/hero', {
     edit ({className, attributes, setAttributes}) {
         const style = {
             color: attributes.color,
-            backgroundImage: `url(${attributes.mediaURL})`
+            backgroundImage: `url(${attributes.mediaURL})`,
         }
         return <div className={className} style={style}>
             <div className='container'>

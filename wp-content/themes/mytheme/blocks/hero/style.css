@@ -4,11 +4,13 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+
 .wp-block-mytheme-hero {
 	box-sizing: border-box;
 	font-family: sans-serif;
 	background-size: cover;
 	padding: 50px;
+	padding-left: 80px;
 	margin-left: calc(50% - 50vw)!important;
 	margin-right: calc(50% - 50vw)!important;
 }

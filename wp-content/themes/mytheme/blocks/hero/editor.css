@@ -9,6 +9,7 @@
 	font-family: sans-serif;
 	background-size: cover;
 	padding: 50px;
+	padding-left: 80px;
 	margin-left: calc(50% - 50vw)!important;
 	margin-right: calc(50% - 50vw)!important;
 }

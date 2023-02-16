@@ -35,8 +35,8 @@
 <style>
 .navbar {
     padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     margin-bottom: 20px;
 }
 

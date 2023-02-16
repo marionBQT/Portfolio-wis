@@ -1,8 +1,8 @@
 const {registerBlockType} = wp.blocks
-const {RichText, InspectorControls, MediaUpload} = wp.editor
+const {RichText, InspectorControls} = wp.editor
 
-registerBlockType('mytheme/manu', {
-    title: 'Manu',
+registerBlockType('mytheme/mika', {
+    title: 'Mika',
     category: 'widgets',
     supports: {
         html: false
@@ -14,6 +14,12 @@ registerBlockType('mytheme/manu', {
         }
         return <div className={className} style={style}>
             <div className='container'>
+				<h3><RichText
+                    tagName="div"
+                    placeholder="Votre header"
+                    value={attributes.header}
+                    onChange={header => setAttributes({header})}
+                /></h3>
                 <h2><RichText
                     tagName="div"
                     placeholder="Votre titre"
@@ -28,14 +34,6 @@ registerBlockType('mytheme/manu', {
                 />
             </div>
             <InspectorControls>
-            <h2>Choisissez l'image du bloc</h2>
-            <MediaUpload
-            type="image"
-            onSelect={image => setAttributes({mediaID: image.id, mediaURL: image.sizes.full.url})}
-            render={({open}) => (
-                <button onClick={open}>Choisir une image</button>
-            )}
-            />
 			<h2>URL du bloc</h2>
 			<RichText
 				tagName="div"

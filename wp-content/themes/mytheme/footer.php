@@ -68,7 +68,7 @@ footer a:hover, footer a:focus {
 
 .footer-bottom {
     text-align: right;
-    margin-top: 30px;
+    margin-top: 6em;
     padding-top: 6px;
     padding-right: 20px;;
     padding-bottom: 6px;

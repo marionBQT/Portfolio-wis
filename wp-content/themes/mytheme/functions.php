@@ -3,6 +3,7 @@
 class MonTheme {
     public function __construct() {
         require_once 'blocks/hero.php';
+        require_once 'blocks/lola.php';
     }
 }
 

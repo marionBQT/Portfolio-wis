@@ -8,10 +8,11 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 	background-size: cover;
-	padding: 50px;
-	padding-left: 80px;
+	padding-top: 6em;
+	padding-bottom: 6em;
 	margin-left: calc(50% - 50vw)!important;
 	margin-right: calc(50% - 50vw)!important;
+	margin-bottom: 2em;
 }
 
 .wp-block-mytheme-lola h1{

@@ -1,14 +1,16 @@
 <?php
 /**
- * Template Name: Page classique
+ * Template Name: Page projet
  */
 ?>
 
 <?php get_header() ?>
 
-<div class="container-classic">
+<div class="container-projet">
+    <a href="http://localhost/wis/portfolio-wis/projets/">
+        <button type="button" class="btn btn-light">Retour</button>
+    </a>
     <?php while (have_posts()) : the_post();?>
-        <h1><?php the_title();?></h1>
         <?php the_content() ?>
 
     <?php endwhile; ?>
@@ -17,7 +19,7 @@
 <?php get_footer() ?>
 
 <style>
-.container-classic {
+.container-projet {
     margin-left: 5%;
     margin-right: 5%;
 }

@@ -1,14 +1,13 @@
 <?php
 /**
- * Template Name: Page classique
+ * Template Name: Page expériences
  */
 ?>
 
 <?php get_header() ?>
 
-<div class="container-classic">
+<div class="container-experiences">
     <?php while (have_posts()) : the_post();?>
-        <h1><?php the_title();?></h1>
         <?php the_content() ?>
 
     <?php endwhile; ?>
@@ -17,7 +16,7 @@
 <?php get_footer() ?>
 
 <style>
-.container-classic {
+.container-experiences {
     margin-left: 5%;
     margin-right: 5%;
 }

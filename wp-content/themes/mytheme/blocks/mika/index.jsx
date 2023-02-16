@@ -1,5 +1,5 @@
 const {registerBlockType} = wp.blocks
-const {RichText, InspectorControls} = wp.editor
+const {RichText} = wp.editor
 
 registerBlockType('mytheme/mika', {
     title: 'Mika',
@@ -33,15 +33,6 @@ registerBlockType('mytheme/mika', {
                     onChange={content => setAttributes({content})}
                 />
             </div>
-            <InspectorControls>
-			<h2>URL du bloc</h2>
-			<RichText
-				tagName="div"
-				placeholder="Votre url"
-				value={attributes.url}
-				onChange={url => setAttributes({url})}
-			/>
-            </InspectorControls>
         </div>
     },
     save () {

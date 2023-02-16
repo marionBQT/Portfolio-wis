@@ -1,4 +1,7 @@
 <?php get_header() ?>
+<a href="http://localhost/wis/portfolio-wis/blog/">
+    <button type="button" class="btn btn-light">Retour</button>
+</a>
 
 <div class="En-tête-categorie" style="background-image: url('<?php echo get_template_directory_uri(); ?> /assets/background-category.jpg'); text-align: center">
     <h1><?php single_cat_title(); ?></h1>

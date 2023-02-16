@@ -6,6 +6,7 @@ class MonTheme {
         require_once 'blocks/lola.php';
         require_once 'blocks/manu.php';
         require_once 'blocks/mika.php';
+        require_once 'blocks/rose.php';
     }
 }
 

@@ -12,16 +12,16 @@
  *
  * @see https://wordpress.org/gutenberg/handbook/designers-developers/developers/tutorials/block-tutorial/applying-styles-with-stylesheets/
  */
-function mika_block_init() {
+function rose_block_init() {
 	// Skip block registration if Gutenberg is not enabled/merged.
 	if ( ! function_exists( 'register_block_type' ) ) {
 		return;
 	}
 	$dir = get_stylesheet_directory() . '/blocks';
 
-	$index_js = 'mika/index.js';
+	$index_js = 'rose/index.js';
 	wp_register_script(
-		'mika-block-editor',
+		'rose-block-editor',
 		get_stylesheet_directory_uri() . "/blocks/{$index_js}",
 		[
 			'wp-blocks',
@@ -33,49 +33,46 @@ function mika_block_init() {
 		filemtime( "{$dir}/{$index_js}" )
 	);
 
-	$editor_css = 'mika/editor.css';
+	$editor_css = 'rose/editor.css';
 	wp_register_style(
-		'mika-block-editor',
+		'rose-block-editor',
 		get_stylesheet_directory_uri() . "/blocks/{$editor_css}",
 		[],
 		filemtime( "{$dir}/{$editor_css}" )
 	);
 
-	$style_css = 'mika/style.css';
+	$style_css = 'rose/style.css';
 	wp_register_style(
-		'mika-block',
+		'rose-block',
 		get_stylesheet_directory_uri() . "/blocks/{$style_css}",
 		[],
 		filemtime( "{$dir}/{$style_css}" )
 	);
 
-	register_block_type( 'mytheme/mika', [
-		'editor_script' => 'mika-block-editor',
-		'editor_style'  => 'mika-block-editor',
-		'style'         => 'mika-block',
+	register_block_type( 'mytheme/rose', [
+		'editor_script'   => 'rose-block-editor',
+		'editor_style'    => 'rose-block-editor',
+		'style'           => 'rose-block',
 		'attributes'	  => [
-			'content'	=> ['type' => 'string'],
 			'title'		=> ['type' => 'string'],
-			'header'	=> ['type' => 'string'],
+			'mediaID' 	=> ['type' => 'string'],
+			'mediaURL' 	=> ['type' => 'string'],
 		],
-		'render_callback' => 'mika_block_render'
+		'render_callback' => 'rose_block_render'
 	] );
 }
 
-function mika_block_render(array $attributes) {
+function rose_block_render(array $attributes) {
 	return <<<HTML
-	<div class="wp-block-mytheme-mika">
-		<div class="card">
-			<div class="card-header">
-				{$attributes['header']}
-			</div>
-			<div class="card-body">
-				<h5 class="card-title">{$attributes['title']}</h5>
-				<p class="card-text">{$attributes['content']}</p>
+	<div class="wp-block-mytheme-rose">
+		<div class="card text-bg-dark">
+			<img src="{$attributes['mediaURL']}" class="card-img" alt="...">
+			<div class="card-img-overlay">
+				<h2 class="card-title">{$attributes['title']}</h2>
 			</div>
 		</div>
 	</div>
 HTML;
 }
 
-add_action( 'init', 'mika_block_init' );
+add_action( 'init', 'rose_block_init' );

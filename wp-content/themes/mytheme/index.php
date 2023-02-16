@@ -1,11 +1,11 @@
 <?php get_header() ?>
 <div class="container-articles">
     <?php if (have_posts()): ?>
-    <h1>Articles</h1>
+    <h1>Blog</h1>
     <div class="btn-group">
-        <a href="/wis/portfolio-wis/category/decouverte/" class="btn btn-outline-dark">Categorie 1</a>
-        <a href="#" class="btn btn-outline-dark">Categorie 2</a>
-        <a href="#" class="btn btn-outline-dark">Categorie 3</a>
+        <a href="/wis/portfolio-wis/category/divertissement/" class="btn btn-outline-dark">Divertissement</a>
+        <a href="/wis/portfolio-wis/category/le-digital/" class="btn btn-outline-dark">Le digital</a>
+        <a href="/wis/portfolio-wis/category/nantes/" class="btn btn-outline-dark">Nantes</a>
     </div>
         <div class="row">
             <?php while (have_posts()): the_post(); ?>
@@ -34,6 +34,10 @@
 
 <style>
 
+.col-sm-4 {
+    margin-bottom: 20px;
+}
+
 h1 {
     text-align: center;
 }
@@ -48,7 +52,7 @@ a {
 }
 
 .container-articles {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 </style>
